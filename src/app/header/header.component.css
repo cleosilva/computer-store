@@ -35,6 +35,10 @@
   padding: 2px;
 }
 
+.main-header__menu a {
+  text-decoration: none;
+}
+
 .main-header__menu a:hover {
   padding: 5px;
   background-color: var(--blue);
