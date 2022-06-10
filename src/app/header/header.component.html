@@ -1,12 +1,12 @@
 <header class="main-header">
   <h1 class="main-header__title">
-    <span class="main-header__title--blue">ProWay</span><span class="main-header__title--orange">Computers</span>
+    <a routerLink="produtos"><span class="main-header__title--blue">ProWay</span><span class="main-header__title--orange">Computers</span></a>
   </h1>
   <div class="container-menu">
   <nav class="main-header__menu">
     <ul>
       <li><a routerLink="produtos">Produtos</a></li>
-      <li><a><i class="fa-solid fa-cart-shopping"></i> <span class="badge-carrinho">0</span></a></li>
+      <li><a><i class="fa-solid fa-cart-shopping"></i> <span class="badge-carrinho">{{carrinhoService.obtemCarrinho().length}}</span></a></li>
       <li><a>Contato</a></li>
       <li><a>GitHub <i class="fa-brands fa-github"></i></a></li>
       <li><a>Linkedin <i class="fa-brands fa-linkedin"></i></a></li>
