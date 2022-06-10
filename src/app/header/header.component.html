@@ -6,10 +6,10 @@
   <nav class="main-header__menu">
     <ul>
       <li><a routerLink="produtos">Produtos</a></li>
-      <li><a><i class="fa-solid fa-cart-shopping"></i> <span class="badge-carrinho">{{carrinhoService.obtemCarrinho().length}}</span></a></li>
-      <li><a>Contato</a></li>
-      <li><a>GitHub <i class="fa-brands fa-github"></i></a></li>
-      <li><a>Linkedin <i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a routerLink="carrinho"><i class="fa-solid fa-cart-shopping"></i> <span class="badge-carrinho">{{carrinhoService.obtemCarrinho().length}}</span></a></li>
+      <li><a routerLink="contato">Contato</a></li>
+      <li><a href="https://github.com/cleosilva" target="_blank">GitHub <i class="fa-brands fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/cleo-silva/" target="_blank">Linkedin <i class="fa-brands fa-linkedin"></i></a></li>
     </ul>
   </nav>
   <form class="search-form">

@@ -43,9 +43,7 @@ a{
 }
 
 .main-header__menu a:hover {
-  padding: 5px;
-  background-color: var(--blue);
-  color: #fff;
+  color: var(--orange);
 }
 
 .container-menu {
@@ -58,8 +56,12 @@ a{
 .badge-carrinho {
   background-color: var(--blue);
   padding: 5px 10px;
-  border-radius: 4px;
+  border-radius: 25px;
   color: white;
+}
+
+.badge-carrinho:hover {
+  background-color: var(--orange);
 }
 
 .search-form {
