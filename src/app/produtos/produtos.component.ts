@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { produtos, IProduto } from './../produtos';
 import { Component, OnInit } from '@angular/core';
 import { ProdutosService } from '../produtos.service';
@@ -10,10 +11,22 @@ import { ProdutosService } from '../produtos.service';
 export class ProdutosComponent implements OnInit {
   produtos: IProduto[] | undefined;
 
-  constructor( private produtoService: ProdutosService) { }
+  constructor(
+    private produtoService: ProdutosService,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
-    this.produtos = this.produtoService.getAll();
+    const produtos = this.produtoService.getAll();
+    this.route.queryParamMap.subscribe(params => {
+      const descricao = params.get('descricao')?.toLowerCase();
+
+      if (descricao) {
+        this.produtos = produtos.filter(produto => produto.descricao.toLowerCase().includes(descricao));
+        return;
+      }
+      this.produtos = produtos;
+    })
   }
 
 }
