@@ -1,17 +1,30 @@
-<header class="main-header">
-  <h1 class="main-header__title">
-    <a routerLink="produtos"><span class="main-header__title--blue">ProWay</span><span class="main-header__title--orange">Computers</span></a>
-  </h1>
-  <div class="container-menu">
-  <nav class="main-header__menu">
-    <ul>
-      <li><a routerLink="produtos">Produtos</a></li>
-      <li><a routerLink="carrinho"><i class="fa-solid fa-cart-shopping"></i> <span class="badge-carrinho">{{carrinhoService.obtemCarrinho().length}}</span></a></li>
-      <li><a routerLink="contato">Contato</a></li>
-      <li><a href="https://github.com/cleosilva" target="_blank">GitHub <i class="fa-brands fa-github"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/cleo-silva/" target="_blank">Linkedin <i class="fa-brands fa-linkedin"></i></a></li>
-    </ul>
-  </nav>
-  <app-barra-pesquisa></app-barra-pesquisa>
+<nav class="navbar navbar-expand-lg bg-light">
+  <a class="navbar-brand main-header__title" routerLink="produtos"><img class="logo" src="assets/logo-ustore.png" alt=""></a>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="produtos">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="carrinho"><i class="fa-solid fa-cart-shopping"></i> <span class="badge-carrinho">{{carrinhoService.obtemCarrinho().length}}</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contato">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/cleosilva" target="_blank">GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/cleo-silva/" target="_blank">Linkedin</a>
+        </li>
+      </ul>
+      <app-barra-pesquisa></app-barra-pesquisa>
+    </div>
   </div>
-</header>
+</nav>
+
+

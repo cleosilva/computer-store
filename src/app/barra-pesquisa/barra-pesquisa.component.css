@@ -30,3 +30,11 @@
   font-size: 22px;
 }
 
+.colorButton {
+  background-color: var(--blue);
+}
+
+.colorButton i {
+  color: #fff;
+}
+
